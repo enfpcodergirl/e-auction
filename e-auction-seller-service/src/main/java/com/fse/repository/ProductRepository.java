@@ -16,7 +16,7 @@ public class ProductRepository {
 	private DynamoDBMapper dynamoDBMapper;
 
 	public Product saveProduct(Product product) {
-		//dynamoDBMapper.save(product);
+		dynamoDBMapper.save(product);
 		return product;
 	}
 
