@@ -8,6 +8,7 @@ public class EAuctionSellerServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EAuctionSellerServiceApplication.class, args);
+
 	}
 
 }
