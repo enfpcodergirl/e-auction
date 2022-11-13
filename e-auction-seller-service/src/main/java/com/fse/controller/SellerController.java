@@ -10,21 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fse.entity.Product;
-import com.fse.repository.ProductRepository;
+import com.fse.service.ProductService;
 
 @RestController
 @RequestMapping
 public class SellerController {
 
 	@Autowired
-	private ProductRepository productRepository;
+	private ProductService productService;
 
 	@PostMapping("/add-product")
 	public Product addProduct(@RequestBody Product product) {
-		return productRepository.saveProduct(product);
+		return productService.saveProduct(product);
 	}
 
-	@GetMapping("/show-bids/{productId}")
+	/*@GetMapping("/show-bids/{productId}")
 	public Product showBids(@PathVariable String productId) {
 		return productRepository.getProductById(productId);
 	}
@@ -33,6 +33,6 @@ public class SellerController {
 	public String deleteProduct(@PathVariable String productId) {
 		return productRepository.deleteProductById(productId);
 
-	}
+	}*/
 
 }
